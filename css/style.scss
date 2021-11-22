@@ -1,0 +1,367 @@
+  // font-family
+  @mixin montserrat($weight:normal) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $weight;
+  }
+
+  @mixin noto-sans-jp($weight:normal) {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: $weight;
+  }
+
+  // wrapper
+  @mixin wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  body {
+
+    // ファーストビュー
+    .fv {
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+
+      // ヘッダー
+      header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        z-index: 900;
+        padding: 30px 58px;
+
+        // ロゴ
+        // .logo {}
+
+        // ハンバーガーメニューのボタン
+        .burger-wrapper {
+          display: flex;
+          cursor: pointer;
+          line-height: 29px;
+          align-items: center;
+
+          .burger-btn {
+            display: inline-block;
+            width: 22px;
+            height: 10px;
+            position: relative;
+
+            .bar {
+              width: 22px;
+              height: 2px;
+              background-color: #fff;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            .bar-top {
+              top: 0;
+              transition: transform 0.3s;
+            }
+
+            .bar-mid {
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            .bar-bottom {
+              bottom: 0;
+              transition: transform 0.3s;
+            }
+          }
+
+          p {
+            @include montserrat();
+            margin-left: 7px;
+          }
+        }
+
+        // ハンバーガーメニューの中身
+        .nav-wrapper {
+          display: none;
+        }
+      }
+
+      // ファーストビューテキスト
+      .fv-text {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -80%);
+        z-index: 900;
+
+        .fv-text-jp {
+          @include noto-sans-jp();
+          font-size: 20px;
+          line-height: 1.2;
+        }
+
+        .fv-text-en {
+          @include montserrat($weight:bold);
+          font-size: 20px;
+          line-height: 1.2;
+        }
+
+        h1 {
+          @include montserrat($weight:bold);
+          font-size: 72px;
+          line-height: 1.2;
+        }
+      }
+
+      // ファーストビューイメージ
+      .fv-img {
+        background: url(../img/the-honest-company-uM-WXMr-3@2x.jpg)top / cover no-repeat;
+        width: 80%;
+        height: 80%;
+        position: absolute;
+
+        &::after {
+          content: "";
+          background: #000;
+          opacity: 0.3;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+        }
+      }
+
+      // ファーストビュー背景
+      .fv-bg {
+        display: flex;
+
+        .wh-box {
+          width: 50%;
+          height: 100vh;
+        }
+
+        .bl-box {
+          width: 50%;
+          height: 100vh;
+          background: #222;
+        }
+      }
+    }
+
+    // メインエリア
+    main {
+      color: #333;
+
+      // アバウト
+      .about {
+        padding-top: 120px;
+
+        .about-wrapper {
+          @include wrapper();
+          background: url(../img/skyline-4582510_1920@2x.jpg)bottom / cover no-repeat;
+          height: 607px;
+          position: relative;
+          margin-bottom: -100px;
+
+          .about-content {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            max-width: 590px;
+            padding: 50px 30px;
+            background: #fff;
+            opacity: 0.95;
+
+            h2 {
+              @include montserrat($weight:bold);
+              font-size: 32px;
+              letter-spacing: 0.068em;
+              margin-bottom: 30px;
+            }
+
+            p {
+              @include noto-sans-jp();
+              font-size: 16px;
+              line-height: 2;
+              margin-bottom: 30px;
+            }
+
+            .more-btn {
+              display: inline-block;
+              width: 160px;
+              height: 36px;
+              background: #000;
+              position: relative;
+              vertical-align: bottom;
+
+              a {
+                @include montserrat($weight:bold);
+                font-size: 12px;
+                letter-spacing: 0.015em;
+                line-height: 36px;
+                text-align: center;
+                color: #fff;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      // ワークス＆カルチャー
+      .works-culture {
+        background: #f0f0f0;
+        padding: 180px 0 60px;
+
+        .works-culture-wrapper {
+          @include wrapper();
+          display: flex;
+          justify-content: space-between;
+
+          .works-content {
+            width: 50%;
+            max-width: 520px;
+
+            h2 {
+              @include montserrat($weight:bold);
+              font-size: 32px;
+              letter-spacing: 0.068em;
+              margin-bottom: 30px;
+            }
+
+            img {
+              width: 100%;
+              height: 350px;
+              margin-bottom: 27px;
+            }
+
+            p {
+              @include noto-sans-jp();
+              margin-bottom: 27px;
+            }
+
+            .more-btn {
+              display: inline-block;
+              width: 160px;
+              height: 36px;
+              background: #000;
+              position: relative;
+              vertical-align: bottom;
+
+              a {
+                @include montserrat($weight:bold);
+                font-size: 12px;
+                letter-spacing: 0.015em;
+                line-height: 36px;
+                text-align: center;
+                color: #fff;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+
+          .culture-content {
+            width: 50%;
+            max-width: 520px;
+
+            h2 {
+              @include montserrat($weight:bold);
+              font-size: 32px;
+              letter-spacing: 0.068em;
+              margin-bottom: 30px;
+            }
+
+            img {
+              width: 100%;
+              height: 350px;
+              margin-bottom: 27px;
+            }
+
+            p {
+              @include noto-sans-jp();
+              margin-bottom: 27px;
+            }
+
+            .more-btn {
+              display: inline-block;
+              width: 160px;
+              height: 36px;
+              background: #000;
+              position: relative;
+              vertical-align: bottom;
+
+              a {
+                @include montserrat($weight:bold);
+                font-size: 12px;
+                letter-spacing: 0.015em;
+                line-height: 36px;
+                text-align: center;
+                color: #fff;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      // トピック
+      .topics {
+        padding: 60px 0;
+
+        .topics-wrapper {
+          @include wrapper();
+
+          h2 {
+            @include montserrat($weight:bold);
+            font-size: 32px;
+            letter-spacing: 0.068em;
+          }
+
+          .topics-content {
+            .content {
+
+              time {}
+
+              h3 {}
+            }
+          }
+
+          .more-btn {
+            display: inline-block;
+            width: 160px;
+            height: 36px;
+            background: #000;
+            position: relative;
+            vertical-align: bottom;
+
+            a {
+              @include montserrat($weight:bold);
+              font-size: 12px;
+              letter-spacing: 0.015em;
+              line-height: 36px;
+              text-align: center;
+              color: #fff;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      // コンタクト
+      .contact {
+        background: #f2f2f2;
+      }
+    }
+
+    // フッター
+    footer {
+      color: #fff;
+    }
+  }

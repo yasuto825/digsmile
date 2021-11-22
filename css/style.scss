@@ -325,9 +325,13 @@
           .topics-content {
             .content {
 
-              time {}
+              time {
+                display: block;
+              }
 
-              h3 {}
+              h3 {
+                display: block;
+              }
             }
           }
 

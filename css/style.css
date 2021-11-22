@@ -333,6 +333,14 @@ body main .topics .topics-wrapper h2 {
   letter-spacing: 0.068em;
 }
 
+body main .topics .topics-wrapper .topics-content .content time {
+  display: block;
+}
+
+body main .topics .topics-wrapper .topics-content .content h3 {
+  display: block;
+}
+
 body main .topics .topics-wrapper .more-btn {
   display: inline-block;
   width: 160px;

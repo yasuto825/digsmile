@@ -331,23 +331,43 @@ body main .topics .topics-wrapper h2 {
   font-weight: bold;
   font-size: 32px;
   letter-spacing: 0.068em;
+  margin-bottom: 29px;
+}
+
+body main .topics .topics-wrapper .topics-content {
+  margin: 0 0 0 auto;
+  max-width: 700px;
+}
+
+body main .topics .topics-wrapper .topics-content .content {
+  padding-bottom: 10px;
+  margin-bottom: 29px;
+  border-bottom: 1px solid #ddd;
 }
 
 body main .topics .topics-wrapper .topics-content .content time {
-  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.015em;
+  line-height: 3.2;
+  color: #CECECE;
 }
 
 body main .topics .topics-wrapper .topics-content .content h3 {
-  display: block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.004em;
 }
 
 body main .topics .topics-wrapper .more-btn {
-  display: inline-block;
+  display: block;
   width: 160px;
   height: 36px;
   background: #000;
   position: relative;
-  vertical-align: bottom;
+  margin: 0 0 0 auto;
 }
 
 body main .topics .topics-wrapper .more-btn a {
@@ -365,9 +385,93 @@ body main .topics .topics-wrapper .more-btn a {
 
 body main .contact {
   background: #f2f2f2;
+  padding: 60px 0 120px;
+}
+
+body main .contact .contact-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .contact .contact-wrapper .contact-content {
+  width: 50%;
+  max-width: 440px;
+  position: relative;
+}
+
+body main .contact .contact-wrapper .contact-content .content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body main .contact .contact-wrapper .contact-content .content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 0.068em;
+  margin-bottom: 30px;
+}
+
+body main .contact .contact-wrapper .contact-content .content p {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+body main .contact .contact-wrapper .contact-content .content .more-btn {
+  display: inline-block;
+  width: 160px;
+  height: 36px;
+  background: #000;
+  position: relative;
+  vertical-align: bottom;
+}
+
+body main .contact .contact-wrapper .contact-content .content .more-btn a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.015em;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+body main .contact .contact-wrapper .contact-img {
+  width: 50%;
+  max-width: 580px;
+}
+
+body main .contact .contact-wrapper .contact-img img {
+  width: 100%;
 }
 
 body footer {
+  background: #525252;
+  height: 50px;
+  line-height: 50px;
+}
+
+body footer small {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.015em;
   color: #fff;
+  display: block;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

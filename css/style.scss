@@ -320,28 +320,41 @@
             @include montserrat($weight:bold);
             font-size: 32px;
             letter-spacing: 0.068em;
+            margin-bottom: 29px;
           }
 
           .topics-content {
+            margin: 0 0 0 auto;
+            max-width: 700px;
+
             .content {
+              padding-bottom: 10px;
+              margin-bottom: 29px;
+              border-bottom: 1px solid #ddd;
 
               time {
-                display: block;
+                @include montserrat();
+                font-size: 10px;
+                letter-spacing: 0.015em;
+                line-height: 3.2;
+                color: #CECECE;
               }
 
               h3 {
-                display: block;
+                @include noto-sans-jp($weight:bold);
+                font-size: 14px;
+                letter-spacing: 0.004em;
               }
             }
           }
 
           .more-btn {
-            display: inline-block;
+            display: block;
             width: 160px;
             height: 36px;
             background: #000;
             position: relative;
-            vertical-align: bottom;
+            margin: 0 0 0 auto;
 
             a {
               @include montserrat($weight:bold);
@@ -361,11 +374,85 @@
       // コンタクト
       .contact {
         background: #f2f2f2;
+        padding: 60px 0 120px;
+
+        .contact-wrapper {
+          @include wrapper();
+          display: flex;
+          justify-content: space-between;
+
+          .contact-content {
+            width: 50%;
+            max-width: 440px;
+            position: relative;
+
+            .content {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+
+              h2 {
+                @include montserrat($weight:bold);
+                font-size: 32px;
+                letter-spacing: 0.068em;
+                margin-bottom: 30px;
+              }
+
+              p {
+                @include noto-sans-jp();
+                font-size: 16px;
+                line-height: 2;
+                margin-bottom: 30px;
+              }
+
+              .more-btn {
+                display: inline-block;
+                width: 160px;
+                height: 36px;
+                background: #000;
+                position: relative;
+                vertical-align: bottom;
+
+                a {
+                  @include montserrat($weight:bold);
+                  font-size: 12px;
+                  letter-spacing: 0.015em;
+                  line-height: 36px;
+                  text-align: center;
+                  color: #fff;
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+
+          .contact-img {
+            width: 50%;
+            max-width: 580px;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
       }
     }
 
     // フッター
     footer {
-      color: #fff;
+      background: #525252;
+      height: 50px;
+      line-height: 50px;
+
+      small {
+        @include montserrat();
+        font-size: 10px;
+        letter-spacing: 0.015em;
+        color: #fff;
+        display: block;
+        text-align: center;
+      }
     }
   }

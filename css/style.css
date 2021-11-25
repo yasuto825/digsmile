@@ -113,6 +113,14 @@ body .fv header .nav-wrapper {
   z-index: -1;
 }
 
+body .fv header .nav-wrapper img {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  -webkit-transform: translate(-28%, -50%);
+          transform: translate(-28%, -50%);
+}
+
 body .fv header .nav-wrapper .header-nav {
   width: 100%;
   height: 100%;
@@ -120,10 +128,6 @@ body .fv header .nav-wrapper .header-nav {
 }
 
 body .fv header .nav-wrapper .header-nav .header-ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -132,9 +136,15 @@ body .fv header .nav-wrapper .header-nav .header-ul {
 }
 
 body .fv header .nav-wrapper .header-nav .header-ul li {
-  margin-left: 0;
   margin-bottom: 30px;
   text-align: center;
+}
+
+body .fv header .nav-wrapper .header-nav .header-ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.068em;
 }
 
 body .fv .fv-text {

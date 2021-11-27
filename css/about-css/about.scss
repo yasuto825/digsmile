@@ -1,0 +1,492 @@
+  // font-family
+  @mixin montserrat($weight:normal) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $weight;
+  }
+
+  @mixin noto-sans-jp($weight:normal) {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: $weight;
+  }
+
+  // ブレイクポイント
+  $breakpoints: ("sm": "screen and (max-width: 300px)",
+    "md": "screen and (max-width: 500px)",
+    "lg": "screen and (max-width: 768px)",
+    "xl": "screen and (max-width: 1150px)"
+  ) !default;
+
+  // メディアクエリ
+  @mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints,$breakpoint)} {
+      @content;
+    }
+  }
+
+  // wrapper
+  @mixin wrapper {
+    max-width: 1130px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @include mq(md) {
+      padding: 0 15px;
+    }
+  }
+
+  // トップページ
+  body {
+
+    // ファーストビュー
+    .fv {
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+
+      // ヘッダー
+      header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        padding: 30px 58px;
+
+        @include mq(xl) {
+          padding: 30px;
+        }
+
+        @include mq(md) {
+          padding: 30px 15px;
+        }
+
+        // ロゴ
+        .logo {
+          white-space: nowrap;
+
+          img {
+            &:first-of-type {
+              @include mq(md) {
+                width: 20px;
+              }
+
+              @include mq(sm) {
+                width: 15px;
+              }
+            }
+
+            &:nth-last-of-type(2) {
+              @include mq(md) {
+                width: 130px;
+              }
+
+              @include mq(sm) {
+                width: 100px;
+              }
+            }
+
+            &:last-of-type {
+              @include mq(md) {
+                width: 30px;
+              }
+
+              @include mq(sm) {
+                width: 20px;
+              }
+            }
+          }
+        }
+
+        // ハンバーガーメニューのボタン
+        .burger-wrapper {
+          display: flex;
+          cursor: pointer;
+          line-height: 29px;
+          align-items: center;
+
+          // ハンバーガー
+          .burger-btn {
+            display: inline-block;
+            width: 22px;
+            height: 10px;
+            position: relative;
+
+            .bar {
+              width: 22px;
+              height: 2px;
+              background-color: #fff;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            .bar-top {
+              top: 0;
+              transition: transform 0.3s;
+            }
+
+            .bar-mid {
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            .bar-bottom {
+              bottom: 0;
+              transition: transform 0.3s;
+            }
+          }
+
+          // ×印
+          .close {
+            .bar-top {
+              transform: translate(-50%, 4px) rotate(45deg);
+              transition: transform 0.3s;
+            }
+
+            .bar-mid {
+              opacity: 0;
+              transition: opacity 0.3s;
+            }
+
+            .bar-bottom {
+              transform: translate(-50%, -4px) rotate(-45deg);
+              transition: transform 0.3s;
+            }
+          }
+
+          // ハンバーガーメニューテキスト
+          p {
+            @include montserrat();
+            margin-left: 7px;
+
+            @include mq(md) {
+              font-size: 10px;
+            }
+
+            @include mq(sm) {
+              margin-left: 5px;
+            }
+          }
+        }
+
+        // ハンバーガーメニュー時の背景
+        .body-mask {
+          display: none;
+          width: calc(100vw - 520px);
+          height: 100vh;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #222;
+          opacity: 0.6;
+        }
+
+        // ハンバーガーメニューの中身
+        .nav-wrapper {
+          display: none;
+          width: 520px;
+          height: 100vh;
+          background-color: #222;
+          opacity: 0.95;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: -1;
+
+          @include mq(md) {
+            width: 100vw;
+          }
+
+          .header-nav {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .header-ul {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+
+              li {
+                margin-bottom: 30px;
+                text-align: center;
+
+                a {
+                  @include montserrat($weight:bold);
+                  font-size: 20px;
+                  letter-spacing: 0.068em;
+                  white-space: nowrap;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // ファーストビューテキスト
+      .fv-text {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -80%);
+        z-index: 800;
+
+        @include mq(xl) {
+          left: 70%;
+        }
+
+        @include mq(lg) {
+          left: 60%;
+        }
+
+        @include mq(md) {
+          top: 60%;
+          left: 50%;
+        }
+
+        .fv-text-jp {
+          @include noto-sans-jp();
+          font-size: 20px;
+          line-height: 1.2;
+
+          @include mq(lg) {
+            font-size: 16px;
+          }
+        }
+
+        .fv-text-en {
+          @include montserrat($weight:bold);
+          font-size: 20px;
+          line-height: 1.2;
+
+          @include mq(lg) {
+            font-size: 16px;
+          }
+        }
+
+        h1 {
+          @include montserrat($weight:bold);
+          font-size: 72px;
+          line-height: 1.2;
+          white-space: nowrap;
+
+          @include mq(lg) {
+            font-size: 56px;
+          }
+
+          @include mq(md) {
+            font-size: 52px;
+          }
+
+          @include mq(sm) {
+            font-size: 50px;
+          }
+        }
+      }
+
+      // ファーストビューイメージ
+      .fv-img {
+        background: url(../../img/about-fv.jpg)top / cover no-repeat;
+        width: 80%;
+        height: 80%;
+        position: absolute;
+
+        @include mq(lg) {
+          width: 70%;
+        }
+
+        @include mq(md) {
+          height: 90%;
+        }
+
+        &::after {
+          content: "";
+          background: #000;
+          opacity: 0.3;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+        }
+      }
+
+      // ファーストビュー背景
+      .fv-bg {
+        display: flex;
+
+        .wh-box {
+          width: 50%;
+          height: 100vh;
+
+          @include mq(md) {
+            width: 30%;
+          }
+        }
+
+        .bl-box {
+          width: 50%;
+          height: 100vh;
+          background: #222;
+
+          @include mq(md) {
+            width: 70%;
+          }
+        }
+      }
+    }
+
+    // メインエリア
+    main {
+      color: #333;
+
+      // ビジョン
+      .vision {
+        padding: 120px 0 60px;
+
+        .vision-wrapper {
+          @include wrapper();
+
+          h2 {
+            @include montserrat($weight:bold);
+            font-size: 32px;
+            letter-spacing: 0.068em;
+            margin-bottom: 25px;
+          }
+
+          h3 {
+            @include noto-sans-jp($weight:bold);
+            font-size: 24px;
+            margin-bottom: 25px;
+          }
+
+          p {
+            @include noto-sans-jp($weight:bold);
+            font-size: 16px;
+            line-height: 2;
+          }
+        }
+      }
+
+      // メッセージ
+      .ceo {
+        padding: 60px 0;
+
+        .ceo-wrapper {
+          @include wrapper();
+
+          .ceo-img {
+            max-width: 420px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .ceo-ms {
+            max-width: 770px;
+            margin: -100px 0 0 auto;
+            padding: 120px 0 90px;
+            background: #f0f0f0;
+
+            .message {
+              max-width: 400px;
+              margin: 0 auto;
+
+              h2 {
+                @include montserrat($weight:bold);
+                font-size: 32px;
+                letter-spacing: 0.068em;
+                margin-bottom: 30px;
+              }
+
+              p {
+                @include noto-sans-jp($weight:bold);
+                font-size: 16px;
+                line-height: 2;
+              }
+            }
+          }
+        }
+      }
+
+      // カンパニー
+      .company {
+        padding: 60px 0 120px;
+
+        .company-wrapper {
+          @include wrapper();
+
+          h2 {
+            @include montserrat($weight:bold);
+            font-size: 32px;
+            letter-spacing: 0.068em;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+          }
+
+          dl {
+            max-width: 800px;
+            margin: 0 0 40px auto;
+
+            div {
+              display: flex;
+              padding: 17px 0;
+              border-bottom: 1px solid #ddd;
+
+              dt {
+                @include noto-sans-jp($weight:bold);
+                font-size: 16px;
+                display: inline-block;
+                width: 130px;
+
+                @include mq(md) {
+                  width: 110px;
+                }
+
+                @include mq(sm) {
+                  width: 100px;
+                }
+              }
+
+              dd {
+                @include noto-sans-jp();
+                font-size: 16px;
+              }
+            }
+          }
+
+          img {
+            width: 100%;
+
+            @include mq(md) {
+              display: none;
+            }
+          }
+
+          .map-img-sp {
+            display: none;
+
+            @include mq(md) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    // フッター
+    footer {
+      background: #525252;
+      height: 50px;
+      line-height: 50px;
+
+      small {
+        @include montserrat();
+        font-size: 10px;
+        letter-spacing: 0.015em;
+        color: #fff;
+        display: block;
+        text-align: center;
+      }
+    }
+  }

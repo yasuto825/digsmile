@@ -34,6 +34,7 @@
     }
   }
 
+  // トップページ
   body {
 
     // ファーストビュー
@@ -103,6 +104,7 @@
           line-height: 29px;
           align-items: center;
 
+          // ハンバーガー
           .burger-btn {
             display: inline-block;
             width: 22px;
@@ -134,6 +136,7 @@
             }
           }
 
+          // ×印
           .close {
             .bar-top {
               transform: translate(-50%, 4px) rotate(45deg);
@@ -151,6 +154,7 @@
             }
           }
 
+          // ハンバーガーメニューテキスト
           p {
             @include montserrat();
             margin-left: 7px;
@@ -270,7 +274,7 @@
 
       // ファーストビューイメージ
       .fv-img {
-        background: url(/img/fv-img.jpg)top / cover no-repeat;
+        background: url(../../img/fv-img.jpg)top / cover no-repeat;
         width: 80%;
         height: 80%;
         position: absolute;
@@ -328,7 +332,7 @@
 
         .about-wrapper {
           @include wrapper();
-          background: url(../img/skyline-4582510_1920@2x.jpg)bottom / cover no-repeat;
+          background: url(../../img/about-img.jpg)bottom / cover no-repeat;
           height: 607px;
           position: relative;
           margin-bottom: -100px;
@@ -430,6 +434,10 @@
               width: 100%;
               height: 350px;
               margin-bottom: 27px;
+
+              @include mq(md) {
+                height: auto;
+              }
             }
 
             p {
@@ -480,6 +488,10 @@
               width: 100%;
               height: 350px;
               margin-bottom: 27px;
+
+              @include mq(md) {
+                height: auto;
+              }
             }
 
             p {

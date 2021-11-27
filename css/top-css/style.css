@@ -1,7 +1,3 @@
-.noscroll {
-  overflow: hidden;
-}
-
 body .fv {
   color: #fff;
   min-height: 100vh;
@@ -30,6 +26,46 @@ body .fv header {
 @media screen and (max-width: 500px) {
   body .fv header {
     padding: 30px 15px;
+  }
+}
+
+body .fv header .logo {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+  body .fv header .logo img:first-of-type {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body .fv header .logo img:first-of-type {
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .fv header .logo img:nth-last-of-type(2) {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body .fv header .logo img:nth-last-of-type(2) {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .fv header .logo img:last-of-type {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body .fv header .logo img:last-of-type {
+    width: 20px;
   }
 }
 
@@ -113,6 +149,18 @@ body .fv header .burger-wrapper p {
   margin-left: 7px;
 }
 
+@media screen and (max-width: 500px) {
+  body .fv header .burger-wrapper p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body .fv header .burger-wrapper p {
+    margin-left: 5px;
+  }
+}
+
 body .fv header .body-mask {
   display: none;
   width: calc(100vw - 520px);
@@ -136,12 +184,10 @@ body .fv header .nav-wrapper {
   z-index: -1;
 }
 
-body .fv header .nav-wrapper img {
-  position: absolute;
-  top: 28%;
-  left: 50%;
-  -webkit-transform: translate(-28%, -50%);
-          transform: translate(-28%, -50%);
+@media screen and (max-width: 500px) {
+  body .fv header .nav-wrapper {
+    width: 100vw;
+  }
 }
 
 body .fv header .nav-wrapper .header-nav {
@@ -168,6 +214,7 @@ body .fv header .nav-wrapper .header-nav .header-ul li a {
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 0.068em;
+  white-space: nowrap;
 }
 
 body .fv .fv-text {
@@ -232,7 +279,7 @@ body .fv .fv-text h1 {
 }
 
 body .fv .fv-img {
-  background: url(../img/the-honest-company-uM-WXMr-3@2x.jpg) top/cover no-repeat;
+  background: url(/img/fv-img.jpg) top/cover no-repeat;
   width: 80%;
   height: 80%;
   position: absolute;

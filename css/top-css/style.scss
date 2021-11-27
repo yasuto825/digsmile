@@ -23,11 +23,6 @@
     }
   }
 
-  // ハンバーガーメニュー
-  .noscroll {
-    overflow: hidden;
-  }
-
   // wrapper
   @mixin wrapper {
     max-width: 1130px;
@@ -65,7 +60,41 @@
         }
 
         // ロゴ
-        // .logo {}
+        .logo {
+          white-space: nowrap;
+
+          img {
+            &:first-of-type {
+              @include mq(md) {
+                width: 20px;
+              }
+
+              @include mq(sm) {
+                width: 15px;
+              }
+            }
+
+            &:nth-last-of-type(2) {
+              @include mq(md) {
+                width: 130px;
+              }
+
+              @include mq(sm) {
+                width: 100px;
+              }
+            }
+
+            &:last-of-type {
+              @include mq(md) {
+                width: 30px;
+              }
+
+              @include mq(sm) {
+                width: 20px;
+              }
+            }
+          }
+        }
 
         // ハンバーガーメニューのボタン
         .burger-wrapper {
@@ -125,6 +154,14 @@
           p {
             @include montserrat();
             margin-left: 7px;
+
+            @include mq(md) {
+              font-size: 10px;
+            }
+
+            @include mq(sm) {
+              margin-left: 5px;
+            }
           }
         }
 
@@ -152,11 +189,8 @@
           right: 0;
           z-index: -1;
 
-          img {
-            position: absolute;
-            top: 28%;
-            left: 50%;
-            transform: translate(-28%, -50%);
+          @include mq(md) {
+            width: 100vw;
           }
 
           .header-nav {
@@ -178,6 +212,7 @@
                   @include montserrat($weight:bold);
                   font-size: 20px;
                   letter-spacing: 0.068em;
+                  white-space: nowrap;
                 }
               }
             }
@@ -235,7 +270,7 @@
 
       // ファーストビューイメージ
       .fv-img {
-        background: url(../img/the-honest-company-uM-WXMr-3@2x.jpg)top / cover no-repeat;
+        background: url(/img/fv-img.jpg)top / cover no-repeat;
         width: 80%;
         height: 80%;
         position: absolute;

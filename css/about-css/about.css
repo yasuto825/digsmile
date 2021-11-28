@@ -258,19 +258,6 @@ body .fv .fv-text .fv-text-jp {
   }
 }
 
-body .fv .fv-text .fv-text-en {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.2;
-}
-
-@media screen and (max-width: 768px) {
-  body .fv .fv-text .fv-text-en {
-    font-size: 16px;
-  }
-}
-
 body .fv .fv-text h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;

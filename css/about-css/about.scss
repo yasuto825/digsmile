@@ -34,7 +34,7 @@
     }
   }
 
-  // トップページ
+  // アバウトページ
   body {
 
     // ファーストビュー
@@ -247,16 +247,6 @@
 
         .fv-text-jp {
           @include noto-sans-jp();
-          font-size: 20px;
-          line-height: 1.2;
-
-          @include mq(lg) {
-            font-size: 16px;
-          }
-        }
-
-        .fv-text-en {
-          @include montserrat($weight:bold);
           font-size: 20px;
           line-height: 1.2;
 

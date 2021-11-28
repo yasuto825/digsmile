@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGSMILE || CONTACT PAGE</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/contact-css/contact.css" />
+  </head>
+  <body>
+    <!-- ファーストビュー -->
+    <div class="fv">
+      <!-- ヘッダー -->
+      <header>
+        <!-- ロゴ -->
+        <div class="logo">
+          <img src="./img/logo@2x.png" alt="ロゴ" />
+          <img src="./img/DIGSMILE@2x.png" alt="DIGSMILE" />
+          <img src="./img/INC.@2x.png" alt="INC" />
+        </div>
+
+        <!--ハンバーガーメニューのボタン-->
+        <div class="burger-wrapper">
+          <div class="burger-btn">
+            <span class="bar bar-top"></span>
+            <span class="bar bar-mid"></span>
+            <span class="bar bar-bottom"></span>
+          </div>
+          <p>MENU</p>
+        </div>
+
+        <!-- ハンバーガーメニュー時の背景 -->
+        <div class="body-mask"></div>
+
+        <!--ハンバーガーメニューの中身-->
+        <div class="nav-wrapper">
+          <nav class="header-nav">
+            <ul class="header-ul">
+              <li><img src="./img/logo@2x.png" alt="ロゴ" /></li>
+              <li><a href="about.html">ABOUT US</a></li>
+              <li><a href="index.html">WORKS</a></li>
+              <li><a href="index.html">CULTURE</a></li>
+              <li><a href="index.html">TOPICS</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ファーストビューテキスト -->
+      <div class="fv-text">
+        <h1>CONTACT</h1>
+        <p class="fv-text-jp">お問い合わせ</p>
+      </div>
+
+      <!-- スクロールダウン -->
+      <div class="scroll-down">
+        <img src="./img/scroll-down@2x.png" alt="scroll-down" />
+      </div>
+
+      <!-- ファーストビューイメージ -->
+      <div class="fv-img"></div>
+
+      <!-- ファーストビュー背景 -->
+      <div class="fv-bg">
+        <div class="wh-box"></div>
+        <div class="bl-box"></div>
+      </div>
+    </div>
+
+    <!-- メインエリア -->
+    <main>
+      <!-- コンタクト -->
+      <section class="contact" id="contact">
+        <!-- コンタクト外枠 -->
+        <div class="contact-wrapper">
+          <!-- フォーム -->
+          <form action="" method="post">
+            <!-- コンタクトテキスト -->
+            <p class="contact-text">
+              ご依頼やご相談についてのご質問やご要望がございましたら、下記フォームよりお気軽にお問い合わせください。送付いただいた内容を確認の上、担当からご連絡させていただきます。
+            </p>
+
+            <!-- ラジオラベル -->
+            <label class="radio-label"
+              >お問い合わせ種別　<span>必須</span></label
+            >
+
+            <!-- ラジオエリア -->
+            <div class="radio-area">
+              <div>
+                <input
+                  type="radio"
+                  id="Request"
+                  name="contact"
+                  value="Request"
+                />
+                <label for="Request">制作依頼</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="recruit"
+                  name="contact"
+                  value="recruit"
+                />
+                <label for="recruit">採用</label>
+              </div>
+
+              <div>
+                <input type="radio" id="ir" name="contact" value="ir" />
+                <label for="ir">IR</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="inquiry"
+                  name="contact"
+                  value="inquiry"
+                />
+                <label for="inquiry">その他</label>
+              </div>
+            </div>
+
+            <!-- テキストエリア -->
+            <div class="text-area">
+              <div>
+                <label for="name">会社名・団体名</label>
+                <input type="text" name="name" id="name" />
+              </div>
+
+              <div>
+                <label for="user-name">お名前　<span>必須</span></label>
+                <input type="text" name="user-name" id="user-name" />
+              </div>
+
+              <div>
+                <label for="email">メールアドレス　<span>必須</span></label>
+                <input type="email" name="email" id="email" />
+              </div>
+
+              <div>
+                <label for="tell-number">電話番号</label>
+                <input type="text" name="tell-number" id="tell-number" />
+              </div>
+
+              <div>
+                <label for="text">お問い合わせ内容　<span>必須</span></label>
+                <textarea name="text" id="text"></textarea>
+              </div>
+            </div>
+
+            <!-- プライバシーポリシー -->
+            <div class="privacy-policy">
+              <h2>PRIVACY POLICY</h2>
+              <div class="privacy-policy-text">
+                <p>
+                  個人情報保護方針<br />
+                  株式会社DIGSMILE（以下、当社）では、個人情報の重要性を認識し、以下の基準に従って、適切な管理、保護に努めます。<br /><br />
+                  1.個人情報の収集、利用<br />
+                  当社では、お客様との取引、サービスの提供のために個人情報を適法に収集し、収集した目的の範囲内で、個人情報を利用いたします。<br /><br />
+                  2.個人情報の第三者への開示と提供<br />
+                  収集したお客様の個人情報は、法的な要請等によらない限り、お客様の承諾を得ない第三者に対して提供・開示はいたしません。
+                  業務の都合上、業務委託先に個人情報を提供する場合は、機密保持契約等によって業務委託先に個人情報保護を義務付けるとともに、業務委託先が適切に個人情報を取り扱うように管理いたします。<br /><br />
+                  3.個人情報の保護<br />
+                  当社では、個人情報の紛失、破壊、改ざん、不正アクセス、および漏えい等を防止するため、適切な対策を行います。<br /><br />
+                  4.法令および関連規範の遵守<br />
+                  当社は、個人情報の取り扱いに関して、個人情報保護法をはじめとする個人情報に関する法令および関連する規範を遵守します。<br /><br />
+                  5.個人情報の開示・訂正・削除<br />
+                  当社では、個人情報の開示・訂正・削除等の依頼があった場合、情報提供者本人であることを確認の上、すみやかに対応いたします。
+                  法令や当社方針により、プライバシー・ポリシーを予告なく改訂することがあります。<br /><br />
+                  お問い合わせ窓口<br />
+                  当社の個人情報の取扱いに関するお問い合わせは下記までご連絡お願いいたします。<br />
+                  株式会社ファイアープレイス 044-589-4333<br />
+                </p>
+              </div>
+            </div>
+
+            <!-- 同意チェック -->
+            <div class="consent-area">
+              <input
+                type="checkbox"
+                id="consent"
+                name="contact"
+                value="consent"
+              />
+              <label for="consent"
+                >個人情報の取り扱いについて同意のうえ送信します。</label
+              >
+
+              <!-- 同意ボタン -->
+              <div class="consent-btn"><a href="">送信</a></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <small>&copy;2018 DIGSMILE INC.</small>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
